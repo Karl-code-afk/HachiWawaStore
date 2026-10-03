@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar ahora | HachiWawa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style_P.css">
+</head>
+
+<body>
+    <header>
+        <h1>🛒 Comprar Ahora</h1>
+        <p>Completa tus datos</p>
+    </header>
+
+    <main>
+        <section class="formulario-pago">
+            <h2>Datos de Envío y Pago</h2>
+
+            <form onsubmit="event.preventDefault(); alert('Simulación de compra'); window.close();">
+
+                <div class="grupo-input">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" placeholder="Ej. Hachi" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="direccion">Dirección de Envío:</label>
+                    <input type="text" id="direccion" placeholder="Calle blablabla" required>
+                </div>
+
+
+                <div class="grupo-input">
+                    <label>Método de Pago:</label>
+                    <div class="opciones-pago">
+
+
+                        <label class="opcion-radio">
+                            <input type="radio" name="metodo_pago" value="tarjeta" checked>
+                            <span>Tarjeta de Crédito/Débito</span>
+                        </label>
+
+
+                        <label class="opcion-radio">
+                            <input type="radio" name="metodo_pago" value="paypal">
+                            <span>PayPal</span>
+                        </label>
+
+
+                        <label class="opcion-radio">
+                            <input type="radio" name="metodo_pago" value="tienda">
+                            <span>Pago en Oxxo</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="grupo-input" id="campo-tarjeta">
+                    <label for="tarjeta">Número de Tarjeta (Simulado):</label>
+                    <input type="text" id="tarjeta" placeholder="0000 0000 0000 0000" maxlength="19">
+                </div>
+
+                <div class="grupo-input">
+                    <label>Total a pagar:</label>
+                    <p id="precio-total" style="font-size: 1.5rem; font-weight: bold; color: #ff9a9e; margin: 5px 0;">
+                        $450.00</p>
+                </div>
+
+                <button type="submit" class="btn-comprar" style="width: 100%; font-size: 1.2rem;">Confirmar Compra
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HachiWawa.</p>
+    </footer>
+
+    <script>
+        const metodoPagoRadios = document.querySelectorAll('input[name="metodo_pago"]');
+        const campoTarjeta = document.getElementById('campo-tarjeta');
+        const parametrosURL = new URLSearchParams(window.location.search);
+        const precioProducto = parametrosURL.get('precio');
+        const textoPrecioTotal = document.getElementById('precio-total');
+
+        if (precioProducto !== null) {
+            textoPrecioTotal.textContent = `$${parseFloat(precioProducto).toFixed(2)} MXN`;
+        }
+
+        else {
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+            let totalCarrito = 0;
+
+            carrito.forEach(producto => {
+                totalCarrito += producto.precio * producto.cantidad;
+            });
+
+            textoPrecioTotal.textContent = `$${totalCarrito.toFixed(2)} MXN`;
+        }
+        metodoPagoRadios.forEach(radio => {
+            radio.addEventListener('change', () => {
+                if (radio.value === 'tarjeta') {
+                    campoTarjeta.style.display = 'block';
+                } else {
+                    campoTarjeta.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

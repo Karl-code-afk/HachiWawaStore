@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HachiWawa Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style_P.css">
+</head>
+
+<body>
+    <header>
+        <h1>HachiWawa 𑄝੭</h1>
+        <p>Bienvenido!! ヽ(・∀・)ﾉ</p>
+        <nav>
+            <ul>
+                <li> <a href="#inicio">Inicio</a></li>
+                <li> <a href="#Catálogo">Catálogo</a></li>
+                <li> <a href="#Contacto">Contacto</a></li>
+                <li> <a href="Mision_Vision.html">Nuestra Misión y Visión</a></li>
+            </ul>
+            <a href="Carrito.html" class="carrito-contador"
+                style="text-decoration: none; color: #fffaf0; font-weight: bold; font-size: 1.2rem;">
+                🛒 <span id="cantidad-carrito">0</span> | $<span id="total-carrito">0.00</span>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <div class="inicio">
+                <h3>Bienvenido a HachiWawa(store) ^. .^₎⟆</h3>
+                <p>Descubre nuestra colección de plushies favoritos de diversos personajes!</p>
+            </div>
+        </section>
+
+        <section id="Catálogo">
+            <div class="titulo-catalogo">
+                <h2>Productos ヽ(・∀・)ﾉ</h2>
+            </div>
+
+
+            <div class="contenedor-productos">
+
+                <!--Winton-->
+                <article class="producto">
+                    <img src="https://i.pinimg.com/736x/07/07/c3/0707c37a156a3b940c55968cc16aebbe.jpg" alt="Winston">
+                    <h3>"Winton"(OW) Plushie (ﾉ>ω<)ﾉ </h3>
+                            <p>$199.99 MXN</p>
+                            <button class="btn-1" data-nombre="Winton" data-precio="199.99"
+                                data-imagen="https://i.pinimg.com/736x/07/07/c3/0707c37a156a3b940c55968cc16aebbe.jpg">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn-2" onclick="window.open('checkout.html?precio=199.99', '_blank')">Comprar
+                                ahora</button>
+                </article>
+
+                <!--Jetpack Cat-->
+                <article class="producto">
+                    <img src="https://anix-shop.com/wp-content/uploads/2026/09/x_yoto71471.jpg" alt="FIKAWATONA">
+                    <h3>Jetpack Cat(OW) Plushie (ﾉ>ω<)ﾉ </h3>
+                            <p>$299.99 MXN</p>
+                            <button class="btn-1" data-nombre="Jetpack Cat" data-precio="299.99"
+                                data-imagen="https://anix-shop.com/wp-content/uploads/2026/09/x_yoto71471.jpg">
+                                Agregar al carrito
+                            </button>
+
+                            <button class="btn-2" onclick="window.open('checkout.html?precio=299.99', '_blank')">Comprar
+                                ahora</button>
+                </article>
+
+                <!--Reaper-->
+                <article class="producto">
+                    <img src="https://i.pinimg.com/1200x/48/e6/ad/48e6add32ae2bb4525903935251bf210.jpg"
+                        alt="Reaper (OW) Plushie">
+                    <h3>Reaper(OW) Plushie (ﾉ>ω<)ﾉ </h3>
+                            <p>$149.99 MXN</p>
+                            <button class="btn-1" data-nombre="Reaper" data-precio="149.99"
+                                data-imagen="https://i.pinimg.com/1200x/48/e6/ad/48e6add32ae2bb4525903935251bf210.jpg">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn-2" onclick="window.open('checkout.html?precio=149.99', '_blank')">Comprar
+                                ahora</button>
+                </article>
+
+                <!--Juno-->
+                <article class="producto">
+                    <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQc0dUttlZ3-hNINfhX7srCRE-2gQfEHkynn25UPfnL6uUc-cI7Op_bj_CtzkKZOFkPnMCwf0Mnv-oYNXZT9YKtDjjWT-m9ZMoPWdWtvoBdIsLa7UDDf_YqhCMCIpCR2g37NdtFlw&usqp=CAc"
+                        alt="Juno">
+                    <h3>Juno(OW) Plushie (ﾉ>ω<)ﾉ </h3>
+                            <p>$159.99 MXN</p>
+                            <button class="btn-1" data-nombre="Juno" data-precio="159.99"
+                                data-imagen="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQc0dUttlZ3-hNINfhX7srCRE-2gQfEHkynn25UPfnL6uUc-cI7Op_bj_CtzkKZOFkPnMCwf0Mnv-oYNXZT9YKtDjjWT-m9ZMoPWdWtvoBdIsLa7UDDf_YqhCMCIpCR2g37NdtFlw&usqp=CAc">
+                                Agregar al carrito
+                            </button>
+                            <button class="btn-2" onclick="window.open('checkout.html?precio=159.99', '_blank')">Comprar
+                                ahora</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h6>
+            <center>
+                <p>&copy; 2026 HachiWawa</p>
+            </center>
+
+        </h6>
+    </footer>
+
+
+    <div id="notificacion" class="toast">
+        <p>Producto agregado al carrito!</p>
+    </div>
+    <script src="Java_P.js"></script>
+
+</body>
+
+</html>
