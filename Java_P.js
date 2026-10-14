@@ -1,4 +1,4 @@
-// Recuperamos el carrito guardado o creamos uno vacío
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const textoContador = document.getElementById("cantidad-carrito");
@@ -18,7 +18,7 @@ function actualizarPantalla() {
   if (textoTotal) textoTotal.innerText = precioTotal.toFixed(2);
 }
 
-// Seleccionamos todos los botones por su clase
+
 const botonesAgregar = document.querySelectorAll(".btn-1");
 
 botonesAgregar.forEach((boton) => {
@@ -41,13 +41,11 @@ botonesAgregar.forEach((boton) => {
     actualizarPantalla();
 
     if (toast) {
-      toast.classList.add("show"); // Tu CSS usa la clase "show" para mostrarlo
+      toast.classList.add("show");
       setTimeout(() => {
         toast.classList.remove("show");
       }, 3000);
     }
   });
 });
-
-// Arrancar al cargar la página
 actualizarPantalla();
