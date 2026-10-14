@@ -1,4 +1,3 @@
-
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const textoContador = document.getElementById("cantidad-carrito");
@@ -17,7 +16,6 @@ function actualizarPantalla() {
   if (textoContador) textoContador.innerText = totalPeluches;
   if (textoTotal) textoTotal.innerText = precioTotal.toFixed(2);
 }
-
 
 const botonesAgregar = document.querySelectorAll(".btn-1");
 

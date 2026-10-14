@@ -38,7 +38,6 @@ function dibujarCarrito() {
 
   textoTotal.innerText = total.toFixed(2);
 }
-
 window.cambiarCantidad = function (index, cambio) {
   carrito[index].cantidad += cambio;
   if (carrito[index].cantidad <= 0) {
