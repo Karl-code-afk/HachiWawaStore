@@ -39,7 +39,6 @@ function dibujarCarrito() {
   textoTotal.innerText = total.toFixed(2);
 }
 
-// Conectamos las funciones a window para que el HTML pueda ejecutarlas
 window.cambiarCantidad = function (index, cambio) {
   carrito[index].cantidad += cambio;
   if (carrito[index].cantidad <= 0) {
