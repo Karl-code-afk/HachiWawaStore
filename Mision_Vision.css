@@ -1,0 +1,134 @@
+body {
+  font-family: Quicksand, sans-serif;
+  background-color: #fffaf0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjV6aXlhNWN4eWU3bGZxN3dlNjBqNXYyOTVtbWJlMTNhczc4dDUyYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JrZHAQT0CxmkPWj9LZ/giphy.gif");
+}
+header {
+  background-color: #ffbee1;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom-left-radius: 2px solid #ff69b4;
+  border-bottom-right-radius: 2px solid #ff69b4;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.icono {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+}
+
+.btn-volver {
+  display: table;
+  margin: 50px auto;
+  padding: 15px 30px;
+  background-color: #ff69b4;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #ff47a3;
+  transform: scale(1.08);
+}
+
+.logo-titulo {
+  top: 10px;
+  left: 18px;
+  width: 45px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+.seccion-tecnica {
+  max-width: 550px;
+  margin: 60px auto 40px auto;
+  padding: 0 20px;
+}
+
+.titulo-tecnico {
+  text-align: center;
+  color: #ffa8d0;
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.desplegable {
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.15);
+  border: 2px solid #ffe5f3;
+  overflow: hidden;
+}
+
+.desplegable summary {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #ff69b4;
+  padding: 20px;
+  cursor: pointer;
+  background-color: #fffaf0;
+  list-style: none;
+  position: relative;
+  transition: background-color 0.3s ease;
+  text-shadow: 1px 1px 3px rgba(255, 105, 180, 0.3);
+}
+
+.desplegable summary::after {
+  content: "▼";
+  position: absolute;
+  right: 20px;
+  color: #ff9a9e;
+  transition: transform 0.3s ease;
+}
+
+.desplegable[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.desplegable summary:hover {
+  background-color: #ffe5f3;
+}
+
+.contenido-desplegable {
+  padding: 20px;
+  border-top: 1px solid #ffe5f3;
+  background-color: white;
+  color: #555;
+  line-height: 1.6;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.contenido-desplegable ul {
+  padding-left: 20px;
+}
+
+.contenido-desplegable li {
+  margin-bottom: 8px;
+}
+
+.desplegable summary::-webkit-details-marker {
+  display: none;
+}
