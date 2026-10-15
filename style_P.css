@@ -289,3 +289,10 @@ footer {
   width: 45px;
   z-index: 10;
 }
+
+* {
+  cursor:
+    url("https://cdn.cursors-4u.net/css-previews/vocaloid-megurine-luka-420ca362-css.webp")
+      0 0,
+    auto !important;
+}
